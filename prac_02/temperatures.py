@@ -2,7 +2,7 @@
 CP1404/CP5632 - Practical
 Pseudocode for temperature conversion
 """
-main();
+def main():
     MENU = """C - Convert Celsius to Fahrenheit
     F - Convert Fahrenheit to Celsius
     Q - Quit"""
