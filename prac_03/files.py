@@ -16,5 +16,6 @@ print(first_number + second_number)
 total = 0
 with open("numbers.txt", "r") as in_file:
     for line in in_file:
-        total += int(line)
+        number += int(line)
+        total += line
 print(total)
