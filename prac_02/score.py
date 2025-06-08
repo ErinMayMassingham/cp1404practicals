@@ -12,7 +12,7 @@ def main():
             if choice == "P":
                 print(get_score_result(score))
             elif choice == "S":
-                print("*" * len(score))
+                print("*" * int(score))
             else:
                 print("Invalid option")
             print(MENU)
