@@ -10,6 +10,7 @@ numbers = [3, 1, 4, 1, 5, 9, 2]
 #"3" in numbers: will check list numbers for the string 3 (numbers = ("3", ...)), returns False
 #numbers + [6, 5, 3]: updates numbers to include the new values, returns [3, 1, 4, 1, 5, 9, 2, 6, 5, 3]
 
+#run code to check answers above
 print(numbers[0])
 print(numbers[-1])
 print(numbers[3])
@@ -19,6 +20,8 @@ print(5 in numbers)
 print(7 in numbers)
 print("3" in numbers)
 print(numbers + [6, 5, 3])
+
+#try code myself
 numbers[0] = "Ten"
 numbers[-1] = 1
 print(numbers[3:])
