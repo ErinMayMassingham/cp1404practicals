@@ -21,8 +21,11 @@ print(7 in numbers)
 print("3" in numbers)
 print(numbers + [6, 5, 3])
 
-#try code myself
+#change first index to "ten"
 numbers[0] = "Ten"
+#change last index to 1
 numbers[-1] = 1
-print(numbers[3:])
-print(f"9 is an element of numbers?: {9 in numbers}")
+#print all index excluding first 2
+print(numbers[2:])
+#check if 9 is an element of numbers
+9 in numbers
