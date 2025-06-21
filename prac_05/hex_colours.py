@@ -11,10 +11,10 @@ COLOUR_HEX = {"absolute zero": "#0048ba",
                 "antiquewhite3": "#cdc0b0",
                 "antiquewhite4": "#8b8378"}
 
-colour_name = input("Enter a colour name: ").lower()
+colour_name = input("Enter a colour name: ").title()
 while colour_name != "":
     try:
         print(f"The code for {colour_name} is {COLOUR_HEX[colour_name]}")
     except KeyError:
         print("Invalid colour name")
-    colour_name = input("Enter a colour name: ").lower()
+    colour_name = input("Enter a colour name: ").title()
