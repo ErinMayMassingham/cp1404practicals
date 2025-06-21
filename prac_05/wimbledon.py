@@ -19,7 +19,7 @@ def load_records(filename):
         for line in in_file:
             parts = line.strip().split(",")
             records.append(parts)
-    return sorted (records)
+    return records
 
 def process_data(records):
     """Make dictionary of the champions and countries."""
@@ -41,7 +41,7 @@ def display_results(champion_to_win, countries):
         print(champion , wins)
     print()
     print(f"These {len(countries)} countries have won Wimbledon: ")
-    print(", ".join(countries))
+    print(", ".join(sorted(countries)))
 
 
 
