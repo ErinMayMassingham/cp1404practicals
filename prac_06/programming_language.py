@@ -1,3 +1,7 @@
+"""
+Expected time: 30 mins
+Total Time: 20 mins
+"""
 class ProgrammingLanguage:
     """Represent information about a programming language."""
 

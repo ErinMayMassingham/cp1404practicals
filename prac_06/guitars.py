@@ -1,3 +1,7 @@
+"""
+Expected time: 20 mins
+Total Time: 35 mins
+"""
 from prac_06.guitar import Guitar
 
 def main():

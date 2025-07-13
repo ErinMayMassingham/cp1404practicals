@@ -1,3 +1,8 @@
+"""
+Expected time: 30 mins
+Total Time: 15 mins
+"""
+
 from prac_06.guitars import Guitar
 
 CURRENT_YEAR = 2017

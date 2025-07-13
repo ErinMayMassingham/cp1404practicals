@@ -1,4 +1,7 @@
-"""CP1404/CP5632 Practical - Car class example."""
+"""CP1404/CP5632 Practical - Car class example.
+Expected time: 20
+Total Time: 15
+"""
 
 
 class Car:

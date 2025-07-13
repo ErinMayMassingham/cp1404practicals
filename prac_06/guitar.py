@@ -1,3 +1,7 @@
+"""
+Expected time: 20 mins
+Total Time: 23 mins
+"""
 VINTAGE_AGE = 50
 
 
