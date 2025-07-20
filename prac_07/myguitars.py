@@ -12,6 +12,9 @@ def main():
     print("\nGuitars sorted by year:")
     display_guitars(guitars)
 
+    new_guitars = add_guitars()
+    guitars.extend(new_guitars)
+
 def load_guitars(filename):
     """Load guitars from CSV into a list of Guitars"""
     guitars = []
@@ -26,6 +29,19 @@ def display_guitars(guitars):
     """Print all guitars in list"""
     for i, guitar in enumerate(guitars, start=1):
         print(f"Guitar {i}: {guitar}")
+
+def add_guitars():
+    """Ask user to enter new guitars adn return list of Guitars"""
+    new_guitars = []
+    print("\nAdd your new guitars:")
+    while True:
+        name = input("Name: ")
+        if not name:
+            break
+        year = int(input("Year: "))
+        cost = float(input("Cost: "))
+        new_guitars.append(Guitar(name, year, cost))
+    return new_guitars
 
 
 main()
