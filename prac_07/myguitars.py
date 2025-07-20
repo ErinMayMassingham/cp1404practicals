@@ -7,13 +7,17 @@ def main():
     print("These are the guitars loaded:")
     guitars = load_guitars(FILENAME)
     display_guitars(guitars)
-
+    """Sort guitars alphabetically"""
     guitars.sort()  # Uses __lt__ method in Guitar class
     print("\nGuitars sorted by year:")
     display_guitars(guitars)
-
+    """Add new guitar to list"""
     new_guitars = add_guitars()
     guitars.extend(new_guitars)
+    """Save new guitars to file"""
+    save_guitars(FILENAME, guitars)
+    print(f"\nSaved {len(guitars)} guitars to {FILENAME}.")
+
 
 def load_guitars(filename):
     """Load guitars from CSV into a list of Guitars"""
@@ -42,6 +46,12 @@ def add_guitars():
         cost = float(input("Cost: "))
         new_guitars.append(Guitar(name, year, cost))
     return new_guitars
+
+def save_guitars(filename, guitars):
+    """Write all guitars to the CSV file."""
+    with open(filename, "w") as file:
+        for guitar in guitars:
+            file.write(f"{guitar.name},{guitar.year},{guitar.cost}\n")
 
 
 main()
