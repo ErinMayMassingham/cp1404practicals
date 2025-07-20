@@ -18,3 +18,7 @@ class Project:
     def is_complete(self):
         """Check if project is fully completed"""
         return self.completion_percentage >= 100
+
+    def get_start_date(self):
+        """"Get start date of project"""
+        return datetime.strptime(self.start_date, "%d/%m/%Y").date()
