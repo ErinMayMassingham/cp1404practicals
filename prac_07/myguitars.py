@@ -8,6 +8,10 @@ def main():
     guitars = load_guitars(FILENAME)
     display_guitars(guitars)
 
+    guitars.sort()  # Uses __lt__ method in Guitar class
+    print("\nGuitars sorted by year:")
+    display_guitars(guitars)
+
 def load_guitars(filename):
     """Load guitars from CSV into a list of Guitars"""
     guitars = []
