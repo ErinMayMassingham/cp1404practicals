@@ -36,4 +36,3 @@ on clarity, structure, and empathy — especially in collaborative and review se
 - **Respect the reader**  
   I format, reformat, and lint because someone else (including future me) will need to read this code and understand it quickly.
 
----
