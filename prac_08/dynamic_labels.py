@@ -11,7 +11,7 @@ from kivy.properties import StringProperty
 
 
 
-class DynamicWidgetsApp(App):
+class DynamicLabelsApp(App):
     """Main program - Kivy app to demo dynamic widget creation."""
     status_text = StringProperty()
 
