@@ -1,51 +1,34 @@
-"""
-CP1404 Week 11 Workshop - GUI program to convert miles to kilometres
-Lindsay Ward, IT@JCU
-06/10/2015
-"""
-
 from kivy.app import App
-from kivy.lang import Builder
+from kivy.uix.boxlayout import BoxLayout
 from kivy.properties import StringProperty
 
-__author__ = 'Lindsay Ward'
-
+# Constant for miles to kilometres conversion
 MILES_TO_KM = 1.60934
 
+class ConvertMilesKm(BoxLayout):
+    km_output = StringProperty("0.0")
 
-class MilesConverterApp(App):
-    """ MilesConverterApp is a Kivy App for converting miles to kilometres """
-    output_text = StringProperty('')
-    def build(self):
-        """ build the Kivy app from the kv file """
-        self.title = "Convert Miles to Kilometres"
-        self.root = Builder.load_file('convert_m_km_solution.kv')
-        return self.root
-
-    def handle_calculate(self, change):
-        """ handle calculation (could be button press or other call), output result to label widget """
-        miles = float(self.root.ids.input_number.text) + change
-        self.root.ids.input_number.text = str(miles)
-
-    def handle_increment(self, change):
-        """
-        handle up/down button press, update the text input with new value, call calculation function
-        :param change: the amount to change
-        """
-        value = self.get_validated_miles() + change
-        self.root.ids.input_miles.text = str(value)
-        self.handle_calculate()
-
-    def get_validated_miles(self):
-        """
-        get text input from text entry widget, convert to float
-        :return: 0 if error, float version of text if valid
-        """
+    def convert(self):
+        """Convert miles to kilometres"""
         try:
-            value = float(self.root.ids.input_miles.text)
-            return value
+            miles = float(self.ids.miles_input.text)
+            self.km_output = f"{miles * MILES_TO_KM:.2f}"
         except ValueError:
-            return 0
+            self.km_output = "0.0"
 
+    def handle_increment(self, value):
+        """Increase or decrease miles by 1"""
+        try:
+            miles = float(self.ids.miles_input.text)
+        except ValueError:
+            miles = 0
+        miles += value
+        self.ids.miles_input.text = str(miles)
+        self.convert()
 
-MilesConverterApp().run()
+class ConvertMilesKmApp(App):
+    def build(self):
+        return ConvertMilesKm()
+
+if __name__ == "__main__":
+    ConvertMilesKmApp().run()
