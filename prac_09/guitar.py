@@ -1,5 +1,5 @@
 """
-CP1404/CP5632 Practical - Suggested Solution
+CP1404/CP5632 Practical 9
 Guitar class
 """
 # Note: It would be better to get the current year from the system clock
