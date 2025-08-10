@@ -78,7 +78,8 @@ might have done myself.
 
 I don't think I would change much, there is nothing on my mind or that I have thought about these past 10-12 weeks that 
 I have wanted changed. Maybe some of the photos at the beginning to be updated to showcase the newer version of pycharm
-but they were not a huge issue at the time and the text instructions were always easy to follow.
+but they were not a huge issue at the time and the text instructions were always easy to follow. Maybe a link to the 
+pull review names on each prac as I kept having to go find the page in past pracs.
 
 ### What did you do really well for practicals in this subject?
 
